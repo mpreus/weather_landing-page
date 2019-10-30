@@ -16,9 +16,7 @@ nav {
 a {
 	color: #041f52;
 	font-weight: bold;
-	padding-left: .5rem;
-	padding-right: 1rem;
-	padding-top: .5rem;
+	padding: .5rem 1rem .5rem .5rem;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -57,20 +55,17 @@ h4 {
 }
 /* zasadnicze elementy struktury strony */
 .wraper {
-	background-image: background: rgba(241,231,103,1);
+	background: rgba(241,231,103,1);
     background: -moz-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(254,182,69,1)));
     background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
     background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
     background: -ms-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
     background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );;
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
 	border: .2rem solid #041f52;
 	border-radius: .5rem; 
-	box-shadow: .2rem .2rem .2rem .2rem grey;
+	box-shadow: .1rem .1rem .1rem .1rem grey;
 	margin: 1rem auto;
 	max-width: 40rem;
 }
@@ -83,7 +78,7 @@ h4 {
 .pictureDiv {
 	border: .03rem solid #222;
 	border-radius: .3rem; 
-	box-shadow: .2rem .2rem .2rem .2rem #444;
+	box-shadow: .1rem .1rem .1rem .1rem #444;
 	cursor: pointer;
 	height: 12rem;
 	margin-bottom: 1.4rem;
@@ -101,7 +96,7 @@ h4 {
 .contentDiv {
 	border: .03rem solid #222;
 	border-radius: .3rem; 
-	box-shadow: .2rem .2rem .2rem .2rem #444;
+	box-shadow: .1rem .1rem .1rem .1rem #444;
 	height: 12rem;
 	padding: 0 .6rem;
 	transition-duration: 3s;
@@ -118,9 +113,6 @@ h4 {
 	line-height: 1.5rem;
 	margin-top: .8rem;
 	margin-bottom: .8rem;
-}
-.contentDiv:hover {
-	background-color: #eee;
 }
 .nightForecast {
 	display: none;

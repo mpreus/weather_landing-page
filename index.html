@@ -2,6 +2,9 @@
 <html lang="pl-PL">
 <head>
 	<meta charset="UTF-8">
+	<meta name="keywords" content="pogoda, prognoza, prognoza godzinowa, Warszawa">
+	<meta name="description" content="HTML, CSS, JavaScript, front-end technologies">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Prognoza pogody</title>
 	<link href="https://fonts.googleapis.com/css?family=Jaldi:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
@@ -11,12 +14,11 @@
 <body>
 	<header>
 		<div class="wraper">
-			<nav> <!-- to jako display: flex; justify-content: flex-end; -->
+			<nav>
 				<a id="aboutUs" href="#">O nas</a>
 				<a id="moreCities" href="#">Więcej miast</a>
 				<a id="contact" href="#">Kontakt</a>
 			</nav>
-			<p class="headerPara">Przgotowujemy prognozy pogody dla wszystkich miast Polski</p>
 		</div>
 	</header>
 	<main>
@@ -24,10 +26,10 @@
 			<h1>Twoja prognoza</h1>
 			<p class="subTitle">Dajemy poczucie komfortu,<br> dzień za dniem prezentując aktualną prognozę pogody</p>
 			<h2>Warszawa</h2>
-			<div class="container">
+			<section class="container">
 				<div class="pictureDiv">
-					<img src="images/Palace-at-night.jpeg" alt="Palace at night">
-					<img src="images/Palace-in-the-morning.jpeg" alt="Palace in the morning">	
+					<img src="images/Palace-at-night.jpg" title="Night view" alt="Palace at night">
+					<img src="images/Palace-in-the-morning.jpg" title="Day view" alt="Palace in the morning">	
 				</div>	
 				<div class="contentDiv">
 					<div class="dayForecast">
@@ -47,9 +49,9 @@
 						<p><b>opady:</b>&nbsp; brak</p>
 					</div>	
 				</div>
-			</div>
+			</section>
 			<h3 id="hourlyForecast">całodobowa prognoza godzinowa</h3>
-			<div class="additionalInfo">
+			<section class="additionalInfo">
 				<p>poniżej podajemy prognozę w okresach dwugodzinnych</p>
 				
 				<h4>godzina&nbsp;&nbsp;&nbsp;&nbsp; 0:00 - 2:00</h4>
@@ -100,7 +102,7 @@
 				<div class="openContent">
 					<p><b>temp.:</b> 9 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> umiarkowane;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-			</div>
+			</section>
 		</div>
 	</main>
 	<footer>

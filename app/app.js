@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", init);
 function init() {
-	console.log("Jestem!");
 
 /* nawigacja */
 	let aboutUs = document.querySelector("#aboutUs");
