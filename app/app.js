@@ -7,7 +7,7 @@ function init() {
 	aboutUs.addEventListener("click", function() {
 		Swal.fire({
   			html: '<span style="color:#041f52; font-size:1.4rem;">Nowo powstała firma<br>z ambicjami dostarczenia szerokiej publiczności<br><b>precyzyjnej prognozy pogody</b></span>',
-  			imageUrl: 'images/undraw_weather_d9t2.svg',
+  			imageUrl: 'images/weather_forecast.svg',
   			imageWidth: 400,
   			imageHeight: 300,
   			imageAlt: 'Custom image',
@@ -20,7 +20,7 @@ function init() {
 	moreCities.addEventListener("click", function() {
 		Swal.fire({
   			html: '<span style="color:#041f52; font-size:1.4rem;">Strona w trakcie budowy (masa pracy!).<br><b>Zajrzyj później</b></span>',
-  			imageUrl: 'images/undraw_code_typing_7jnv.svg',
+  			imageUrl: 'images/code_typing.svg',
   			imageWidth: 400,
   			imageHeight: 300,
   			imageAlt: 'Custom image',
@@ -33,7 +33,7 @@ function init() {
 	contact.addEventListener("click", function() {
 		Swal.fire({
   			html: '<span style="color:#041f52; font-size:1.4rem;">Skontaktuj się z nami przez e-mail:<a href="mailto:mpreus@onet.eu">Maciej Preus</a><br>albo zadzwoń by pogadać: +48 000 000 000</span>',
-  			imageUrl: 'images/undraw_code_typing_7jnv.svg',
+  			imageUrl: 'images/message.svg',
   			imageWidth: 400,
   			imageHeight: 300,
   			imageAlt: 'Custom image',
@@ -75,7 +75,7 @@ function init() {
 		
 		hourlyForecast.classList.toggle("visible");
 	});
-	
+
 /* accordion dla prognozy godzinowej */
 	let hoursDisp = document.querySelectorAll("h4");
 	
