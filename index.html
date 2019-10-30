@@ -5,15 +5,16 @@
 	<title>Prognoza pogody</title>
 	<link href="https://fonts.googleapis.com/css?family=Jaldi:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	<script type="text/javascript" src="app/app.js"></script>
 </head>
 <body>
 	<header>
 		<div class="wraper">
 			<nav> <!-- to jako display: flex; justify-content: flex-end; -->
-				<a href="#">O nas</a>
-				<a href="#">Więcej miast</a>
-				<a href="#">Kontakt</a>
+				<a id="aboutUs" href="#">O nas</a>
+				<a id="moreCities" href="#">Więcej miast</a>
+				<a id="contact" href="#">Kontakt</a>
 			</nav>
 			<p class="headerPara">Przgotowujemy prognozy pogody dla wszystkich miast Polski</p>
 		</div>
@@ -27,8 +28,7 @@
 				<div class="pictureDiv">
 					<img src="images/Palace-at-night.jpeg" alt="Palace at night">
 					<img src="images/Palace-in-the-morning.jpeg" alt="Palace in the morning">	
-				</div>
-					
+				</div>	
 				<div class="contentDiv">
 					<div class="dayForecast">
 						<h3>Dzisiaj</h3>
@@ -45,8 +45,7 @@
 						<p><b>zachmurzenie:</b>&nbsp; duże</p>
 						<p><b>wiatr:</b>&nbsp; słaby</p>
 						<p><b>opady:</b>&nbsp; brak</p>
-					</div>
-					
+					</div>	
 				</div>
 			</div>
 			<h3 id="hourlyForecast">całodobowa prognoza godzinowa</h3>
@@ -57,57 +56,46 @@
 				<div class="openContent">
 					<p><b>temp.:</b> 8 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> umiarkowane;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina&nbsp;&nbsp;&nbsp;&nbsp; 2:00 - 4:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 8 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> duże;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina&nbsp;&nbsp;&nbsp;&nbsp; 4:00 - 6:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 8 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> duże;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina&nbsp;&nbsp;&nbsp;&nbsp; 6:00 - 8:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 19 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> duże;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina&nbsp;&nbsp; 8:00 - 10:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 12 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> umiarkowane;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina 10:00 - 12:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 14 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> umiarkowane;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina 12:00 - 14:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 16 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> umiarkowane;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina 14:00 - 16:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 18 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> małe;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina 16:00 - 18:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 15 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> małe;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina 18:00 - 20:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 12 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> umiarkowane;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina 20:00 - 22:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 10 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> umiarkowane;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
 				</div>
-				
 				<h4>godzina 22:00 - 24:00</h4>
 				<div class="openContent">
 					<p><b>temp.:</b> 9 °C;&nbsp;&nbsp; <b>zachmurzenie:</b> umiarkowane;&nbsp;&nbsp; <b>wiatr:</b> słaby;&nbsp;&nbsp; <b>opady:</b> brak</p>
@@ -120,6 +108,5 @@
 			<p>zaprojektował i wykonał: <a href="mailto:mpreus@onet.eu">Maciej Preus</a> @2019</p>
 		</div>
 	</footer>
-	
 </body>
 </html>

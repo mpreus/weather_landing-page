@@ -8,13 +8,11 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-
 /* nawigancja */
 nav {
 	display: flex;
 	justify-content: flex-end;
 }
-
 a {
 	color: #041f52;
 	font-weight: bold;
@@ -24,7 +22,6 @@ a {
 	text-decoration: none;
 	text-transform: uppercase;
 }
-
 /* nagłówki */
 h1, h2, h3 {
 	text-align: center;
@@ -52,14 +49,12 @@ h4 {
 	padding-bottom: .1rem;
 	transition-duration: 3s;
 }
-
 /* podtytuł */
 .subTitle {
 	font-size: 1.4rem;
 	line-height: 1.4rem;
 	text-align: center;
 }
-
 /* zasadnicze elementy struktury strony */
 .wraper {
 	background-image: background: rgba(241,231,103,1);
@@ -79,14 +74,12 @@ h4 {
 	margin: 1rem auto;
 	max-width: 40rem;
 }
-
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	margin-bottom: 1rem;
 }
-
 .pictureDiv {
 	border: .03rem solid #222;
 	border-radius: .3rem; 
@@ -96,18 +89,15 @@ h4 {
 	margin-bottom: 1.4rem;
 	width: 19rem;
 }
-
 .pictureDiv img {
 	height: inherit;
 	position: absolute;
 	transition: opacity 1.5s ease;
 	width: inherit;
 }
-
 .pictureDiv img:hover {
 	opacity: 0;
 }
-
 .contentDiv {
 	border: .03rem solid #222;
 	border-radius: .3rem; 
@@ -117,34 +107,28 @@ h4 {
 	transition-duration: 3s;
 	width: 18rem;
 }
-
 .contentDiv p {
 	font-size: 1.2rem;
 	line-height: .8rem;
 	margin-bottom: 1rem;
 	margin-top: .8rem;
 }
-
 .contentDiv h3 {
 	font-size: 1.5rem;
 	line-height: 1.5rem;
 	margin-top: .8rem;
 	margin-bottom: .8rem;
 }
-
 .contentDiv:hover {
 	background-color: #eee;
 }
-
 .nightForecast {
 	display: none;
 }
-
 /* rozwijanie szczegółowej prognozy na dzień */
 #hourlyForecast {
 	cursor: pointer;
 }
-
 /* rozwijana prognoza godzinowa */
 .additionalInfo {
 	display: none;
@@ -152,17 +136,14 @@ h4 {
 	padding: 0 .8rem;
 	text-align: center;
 }
-
 .visible {
 	display: block;
 }
-
 h4:hover {
 	background-color: #041f52; 
 	cursor: pointer;
 	color: #fff;
 }
-
 h4:after {
 	color: #000;
 	content: "+";
@@ -170,37 +151,30 @@ h4:after {
     float: right;
     margin-right: 5rem;
 }
-
 .openContent {
 	display: none;
 }
-
 .openContent p {
 	font-size: 1.2rem;
 	line-height: 1.2rem;
 }
-
 .active {
 	background-color: #041f52; 
 	color: #fff;
 }
-
 .active:after {
 	color: #fff;
 	content: "-";
 	font-size: 1.2rem;
 }
-
 /* header i footer */
 .wraper > p {
 	text-align: center;
 }
-
 p > a {
 	padding: 0;
 	text-transform: none;
 }
-
 .headerPara {
 	text-transform: uppercase;
 }
