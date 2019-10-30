@@ -83,25 +83,34 @@ h4 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	margin-bottom: 1rem;
 }
 
 .pictureDiv {
-	background-image: url("http://t2.gstatic.com/images?q=tbn:ANd9GcRhD9lYcUVevwWUcgKRZZZ8u3mL1fNfxDjFTyp23UfdkZ8CPgNG");
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
 	border: .03rem solid #222;
 	border-radius: .3rem; 
 	box-shadow: .2rem .2rem .2rem .2rem #444;
-	height: 14rem;
-	width: 18rem;
+	height: 12rem;
+	margin-bottom: 1.4rem;
+	width: 19rem;
+}
+
+.pictureDiv img {
+	height: inherit;
+	position: absolute;
+	transition: opacity 1.5s ease;
+	width: inherit;
+}
+
+.pictureDiv img:hover {
+	opacity: 0;
 }
 
 .contentDiv {
 	border: .03rem solid #222;
 	border-radius: .3rem; 
 	box-shadow: .2rem .2rem .2rem .2rem #444;
-	height: 14rem;
+	height: 12rem;
 	padding: 0 .6rem;
 	transition-duration: 3s;
 	width: 18rem;
@@ -110,6 +119,15 @@ h4 {
 .contentDiv p {
 	font-size: 1.2rem;
 	line-height: .8rem;
+	margin-bottom: 1rem;
+	margin-top: .8rem;
+}
+
+.contentDiv h3 {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	margin-top: .2rem;
+	margin-bottom: .8rem;
 }
 
 .contentDiv:hover {
@@ -142,7 +160,7 @@ h4:after {
 
 .openContent p {
 	font-size: 1.2rem;
-	line-height: .8rem;
+	line-height: 1.2rem;
 }
 
 .active {
@@ -160,6 +178,12 @@ h4:after {
 .wraper > p {
 	text-align: center;
 }
+
+p > a {
+	padding: 0;
+	text-transform: none;
+}
+
 .headerPara {
 	text-transform: uppercase;
 }
