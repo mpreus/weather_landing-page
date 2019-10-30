@@ -16,7 +16,8 @@ nav {
 }
 
 a {
-	color: #000;
+	color: #041f52;
+	font-weight: bold;
 	padding-left: .5rem;
 	padding-right: 1rem;
 	padding-top: .5rem;
@@ -72,7 +73,7 @@ h4 {
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: .2rem solid darkred;
+	border: .2rem solid #041f52;
 	border-radius: .5rem; 
 	box-shadow: .2rem .2rem .2rem .2rem grey;
 	margin: 1rem auto;
@@ -90,6 +91,7 @@ h4 {
 	border: .03rem solid #222;
 	border-radius: .3rem; 
 	box-shadow: .2rem .2rem .2rem .2rem #444;
+	cursor: pointer;
 	height: 12rem;
 	margin-bottom: 1.4rem;
 	width: 19rem;
@@ -126,7 +128,7 @@ h4 {
 .contentDiv h3 {
 	font-size: 1.5rem;
 	line-height: 1.5rem;
-	margin-top: .2rem;
+	margin-top: .8rem;
 	margin-bottom: .8rem;
 }
 
@@ -134,16 +136,31 @@ h4 {
 	background-color: #eee;
 }
 
+.nightForecast {
+	display: none;
+}
+
+/* rozwijanie szczegółowej prognozy na dzień */
+#hourlyForecast {
+	cursor: pointer;
+}
+
 /* rozwijana prognoza godzinowa */
 .additionalInfo {
+	display: none;
 	line-height: 1.4rem;
 	padding: 0 .8rem;
 	text-align: center;
 }
 
+.visible {
+	display: block;
+}
+
 h4:hover {
+	background-color: #041f52; 
 	cursor: pointer;
-	background-color: #0027c2; /* głębszy granat */
+	color: #fff;
 }
 
 h4:after {
@@ -164,7 +181,7 @@ h4:after {
 }
 
 .active {
-	background-color: #0027c2; /* głębszy granat */
+	background-color: #041f52; 
 	color: #fff;
 }
 
