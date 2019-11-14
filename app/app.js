@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", init);
 function init() {
 
+/* 
+wywołanie funkcji z efektami wizualnymi: 
+buildingVisualEffectOnCanvas();
+*/
+
 /* nawigacja */
 	let aboutUs = document.querySelector("#aboutUs");
 	aboutUs.addEventListener("click", function() {
@@ -41,6 +46,28 @@ function init() {
   			animation: false
 		});
 	});
+
+/* efekty wizualne na dynamicznie wstawianym tytule strony */
+	function buildingVisualEffectOnCanvas() {
+		let particles = []; // tablica na cząsteczki 
+		let frequency = 80; // tempo zmian w animacji, użyte w setInterval()
+		/* definiowanie obiektu 'canvas' - wraz z funkcją createCanvas() - tu: na całą dostępną szerokość i wysokość okna */
+		let c1 = createCanvas({width: window.innerWidth / 2, height: window.innerHeight / 4 });
+		let c2 = createCanvas({width: window.innerWidth / 2, height: window.innerHeight / 4 });
+		let c3 = createCanvas({width: window.innerWidth / 2, height: window.innerHeight / 4 });
+		
+		let tela = c1.canvas;
+		let canvas = c1.context;
+		/* wstawiamy canvas do 'div': */
+		document.getElementById("bodyElem").append(c3.canvas);
+		/* tekst do wypełnienia bąbelkami (w dwóch liniach) */
+		writeText(c2.canvas, c2.context, "TWOJA\nPROGNOZA POGODY");
+
+
+	}
+/* koniec funkcji z efektami wizualnymi */
+
+
 
 /* prognoza na noc */
 	let pictureDiv = document.querySelector(".pictureDiv");
