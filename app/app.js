@@ -63,6 +63,40 @@ buildingVisualEffectOnCanvas();
 		/* tekst do wypełnienia bąbelkami (w dwóch liniach) */
 		writeText(c2.canvas, c2.context, "TWOJA\nPROGNOZA POGODY");
 
+		setInterval(function() {
+    			populate();
+  			}.bind(this), frequency
+		);
+
+		function createCanvas(properties) {
+	  		let canvas = document.createElement('canvas');
+	    /* rozmiary obszaru canvas: */
+	  		canvas.width = properties.width;
+	  		canvas.height = properties.height;
+	  	/* określenie kontekstu (efekty w canvas mogą być dwu- lub trójwymiarowe) */
+	  		let context = canvas.getContext("2d");
+	  		return {
+	    		canvas: canvas,
+	    		context: context
+	  		}
+		}
+		/* definiowanie tekstu do wypełnienia bąbelkami wraz ze stylami: */
+		function writeText(canvas, context, text) {
+	  		let size = 60;
+	  		context.font = size + "px Jaldi";
+	  		context.fillStyle = "#000";
+	  		context.textAlign = "center";
+	  		let lineheight = 60;
+	  		let lines = text.split('\n');
+	  		for (let i = 0; i < lines.length; i++) {
+	  		    context.fillText(lines[i], canvas.width / 2, canvas.height / 2 + lineheight * i - (lineheight * (lines.length - 1)) / 3);
+	  		}
+		}
+		/* klasa definiująca bąbelki - efekt wpłynięcia koloru */
+	
+
+
+
 
 	}
 /* koniec funkcji z efektami wizualnymi */
