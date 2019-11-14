@@ -20,13 +20,23 @@ a {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+/* div z canvas */
+#bodyElem {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 8rem;
+}
+canvas {
+	display: block;
+	font-weight: bold;
+	position: absolute;
+}
 /* nagłówki */
-h1, h2, h3 {
+h2, h3 {
 	text-align: center;
 	text-transform: uppercase;
-}
-h1 {
-	font-size: 2.5rem;
 }
 h2 {
 	font-size: 2rem;
