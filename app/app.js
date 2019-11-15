@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", init);
 function init() {
 
-/* 
-wywołanie funkcji z efektami wizualnymi: 
+/* wywołanie funkcji z efektami wizualnymi: */
 buildingVisualEffectOnCanvas();
-*/
 
 /* nawigacja */
 	let aboutUs = document.querySelector("#aboutUs");
@@ -138,10 +136,44 @@ buildingVisualEffectOnCanvas();
 			    return true;
 			}
 		}
-
-
-
-
+		/* maska na canvas z efektem rozmycia */
+		function maskCanvas() {
+			c3.context.drawImage(c2.canvas, 0, 0, c2.canvas.width, c2.canvas.height);
+			c3.context.globalCompositeOperation = "source-atop";
+			c3.context.drawImage(c1.canvas, 0, 0);
+			blur(c1.context, c1.canvas, 5); /* trzeci parametr (amount) wpływa na wielkość rozmycia */
+		}
+		function blur(ctx, canvas, amt) {
+	  		ctx.filter = `blur(${amt}px)`;
+	  		ctx.drawImage(canvas, 0, 0);
+		}
+		function populate() {
+	  		particles.push(
+	    		new Particle(
+	      			canvas,{
+	        			x: (window.innerWidth / 1.8),
+	        			y: (window.innerHeight / 1.8)
+	      			}
+	    		)
+	  		)
+	  		return particles.length;
+		}
+		/* czyszczenie canvas */
+		function clear() {
+	  		canvas.globalAlpha = 0.03; 
+	  		canvas.fillStyle = '#111';
+	  		canvas.fillRect(0, 0, tela.width, tela.height);
+	  		canvas.globalAlpha = 1;
+		}
+		function update() {
+	  		clear();
+	  		particles = particles.filter(function(p) {
+	    	return p.move();
+	  		});
+	  		maskCanvas();
+	  		requestAnimationFrame(update.bind(this))
+		}
+		update();
 	}
 /* koniec funkcji z efektami wizualnymi */
 
