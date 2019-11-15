@@ -93,7 +93,51 @@ buildingVisualEffectOnCanvas();
 	  		}
 		}
 		/* klasa definiująca bąbelki - efekt wpłynięcia koloru */
-	
+		class Particle {
+			constructor(canvas, options) {
+			    let random = Math.random(); 
+			    this.canvas = canvas;
+			    this.x = options.x / 2;
+			    this.y = options.y / 2;	
+			    this.s = (1 + Math.random());
+			    this.a = 0;
+			    this.w = window.innerWidth;
+			    this.h = window.innerHeight;
+			    this.radius = Math.random() * 20;
+			    if (this.radius > 14) {
+				    this.color = "#2d89ef";
+				}
+				else if (this.radius <= 14 && this.radius >= 7) {
+				    this.color = "#012b57";
+				}
+				else {
+				    this.color = "#0051ab";
+				}
+			}
+			render() { 				/* renderowanie */
+			    this.canvas.beginPath();
+			    this.canvas.arc(this.x / 1.3, this.y / 1.3, this.radius, 0, 3 * Math.PI);
+			    this.canvas.lineWidth = 3;
+			    this.canvas.fillStyle = this.color;
+			    this.canvas.fill();
+			    this.canvas.closePath();
+			}
+			/* definiowanie zakresu ruchu bąbelków */
+			move() {
+			    this.x += Math.cos(this.a) * this.s * 2;
+			    this.y += Math.sin(this.a) * this.s * 2;
+			    this.a += Math.random() * 0.8 - 0.5;
+			    /* trzy różne kolory zapewnią ładny efekt */
+			    if (this.x < 0 || this.x > (this.w - this.radius) ) {
+			      return false;
+			    }
+			    if (this.y < 0 || this.y > (this.h - this.radius) ) {
+			      return false;
+			    }
+			    this.render();
+			    return true;
+			}
+		}
 
 
 
